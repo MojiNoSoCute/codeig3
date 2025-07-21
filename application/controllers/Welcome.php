@@ -12,13 +12,16 @@ class Welcome extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->database();
 		$this->load->model('MyData');
+		
 	}
 
 	public function hello()
 	{
 		// $book_data["books"] = array("Java", "PHP", "Python", "Kotlin");
 		$data['name'] = $this->MyData->showName();;
+		$this->MyData->getProducts();
 		$data['email'] = "674259013@webmail.npru.ac.th";
 
 		$this->load->view('welcome_message' , $data);
