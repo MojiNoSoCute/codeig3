@@ -9,13 +9,11 @@ class MyData extends CI_Model
         return "Nai";
     }
 
-    public function getProducts()
+    public function getAllProducts()
     {
-        $sql = "SELECT * FROM products";
-
-        $query = $this->db->query($sql)->result_array();
+        $query = $this->db->get('products')->result();
         foreach ($query as $row) {
-            echo $row['code'] . " " . $row['name'] . " " . $row['price'] . "</br>";
+            echo $row->code . " " . $row->name . " " . $row->price . "</br>";
         }
     }
 }
