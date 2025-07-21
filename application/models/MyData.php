@@ -11,9 +11,9 @@ class MyData extends CI_Model
 
     public function getAllProducts()
     {
-        $query = $this->db->get('products')->result();
-        foreach ($query as $row) {
-            echo $row->code . " " . $row->name . " " . $row->price . "</br>";
-        }
+        return $query = $this->db->get('products')->result();
+        // foreach ($query as $row) {
+        //     echo $row->code . " " . $row->name . " " . $row->price . "</br>";
+        // }
     }
 }

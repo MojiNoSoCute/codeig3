@@ -19,9 +19,10 @@ class Welcome extends CI_Controller
 	public function hello()
 	{
 		// $book_data["books"] = array("Java", "PHP", "Python", "Kotlin");
-		$data['name'] = $this->MyData->showName();;
-		$this->MyData->getAllProducts();
-		$data['email'] = "674259013@webmail.npru.ac.th";
+		// $data['name'] = $this->MyData->showName();;
+		// $data['email'] = "674259013@webmail.npru.ac.th";
+
+		$data['query'] = $this->MyData->getAllProducts();
 
 		$this->load->view('welcome_message', $data);
 

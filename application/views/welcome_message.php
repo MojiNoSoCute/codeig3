@@ -22,10 +22,13 @@
 	<div id="container">
 		<h1>software engineering!</h1>
 		<?php
-		echo "You name : " . $name . " Email : " . $email;
+		// echo "You name : " . $name . " Email : " . $email;
 		// foreach ($books as $book)
 		// 		echo "Book : " . $book . "<br/>";
-		
+		foreach ($query as $row) {
+			echo $row->code . " " . $row->name . " " . $row->price . "</br>";
+		}
+
 		?>
 </body>
 
